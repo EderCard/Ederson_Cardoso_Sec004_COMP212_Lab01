@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Ederson_Cardoso_Exercise01
 {
-    public delegate void AverageDelegate(double grade1, double grade2, double grade3 );
     class Program
     {
         static void Main(string[] args)
@@ -34,17 +33,17 @@ namespace Ederson_Cardoso_Exercise01
             // Exercise 1b - Action<> delegate predicate
             // Read input strings
             Console.Write("Enter first grade: ");
-            double grade1 = Convert.ToDouble(Console.ReadLine());
+            double g1 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Enter second grade: ");
-            double grade2 = Convert.ToDouble(Console.ReadLine());
+            double g2 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Enter third grade: ");
-            double grade3 = Convert.ToDouble(Console.ReadLine());
+            double g3 = Convert.ToDouble(Console.ReadLine());
 
-            AverageDelegate avg = new AverageDelegate(AvgGrade);
-
-            avg(grade1, grade2, grade3);
+            // Action delegate using lambda and the method AvgGrade
+            Action<double, double, double> average = (double grade1, double grade2, double grade3) => AvgGrade(g1, g2, g3);
+            average(g1, g2, g3);
         }
 
         /// <summary>
@@ -80,7 +79,6 @@ namespace Ederson_Cardoso_Exercise01
             double result = (value1 + value2 + value3) / 3;
             Console.WriteLine("The average is: " + result);
         }
-        
-    }
 
-}
+    } // end class
+} // end namespace
