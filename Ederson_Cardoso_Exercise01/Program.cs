@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * Create a C# app in which you are required to create the following methods using built-in delegates predicate
+ * and lambdas.
+ * - string Minimum(string1, string2, string3) which returns the smallest of three string values.To test this
+ * method, you need to use built-in Func<> delegate predicate
+ * - void AvgGrade(value1, value2, value3) which displays the average of three grades. To test this method,
+ * you need to use built-in Action<> delegate predicate
+ */
 namespace Ederson_Cardoso_Exercise01
 {
     class Program
@@ -44,7 +51,7 @@ namespace Ederson_Cardoso_Exercise01
             // Action delegate using lambda and the method AvgGrade
             Action<double, double, double> average = (double grade1, double grade2, double grade3) => AvgGrade(g1, g2, g3);
             average(g1, g2, g3);
-        }
+        } // end Main
 
         /// <summary>
         /// This method returns the smallest of three strings
@@ -66,7 +73,7 @@ namespace Ederson_Cardoso_Exercise01
                 smallestString = string3;
             }
             return smallestString;
-        }
+        } // end method Minimum
 
         /// <summary>
         /// This method returns the average of three doubles
@@ -78,7 +85,7 @@ namespace Ederson_Cardoso_Exercise01
         {
             double result = (value1 + value2 + value3) / 3;
             Console.WriteLine("The average is: " + result);
-        }
+        } // end method AvgGrade
 
     } // end class
 } // end namespace
