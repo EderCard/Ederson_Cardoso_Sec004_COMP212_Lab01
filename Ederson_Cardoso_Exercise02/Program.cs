@@ -17,7 +17,7 @@ using System.Threading.Tasks;
  */
 namespace Ederson_Cardoso_Exercise02
 {
-    // Delegate for a funtion that receives a double and returns a bool
+    // Delegate for a function that receives a double and returns a bool
     public delegate bool GradesPredicate(double grade);
     class Program
     {

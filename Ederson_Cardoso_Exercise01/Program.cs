@@ -62,17 +62,9 @@ namespace Ederson_Cardoso_Exercise01
         /// <returns></returns>
         private static string Minimum(string string1, string string2, string string3)
         {
-            string smallestString = string1;
+            string[] stringArray = { string1, string2, string3 };
 
-            if (string2.Length < smallestString.Length)
-            {
-                smallestString = string2;
-            }
-            if (string3.Length < smallestString.Length)
-            {
-                smallestString = string3;
-            }
-            return smallestString;
+            return stringArray.Min();
         } // end method Minimum
 
         /// <summary>
